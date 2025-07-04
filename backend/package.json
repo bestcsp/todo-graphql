@@ -3,16 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-  "dev": "ts-node-dev --respawn src/index.ts",
-  "build": "tsc",
-  "start": "node dist/index.js"
-}
-,
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@graphql-tools/merge": "^9.0.24",
+    "@graphql-tools/schema": "^10.0.23",
     "apollo-server": "^3.13.0",
     "dotenv": "^17.0.1",
     "graphql": "^16.11.0",

@@ -1,14 +1,12 @@
 import { ApolloServer } from "apollo-server";
-import { typeDefs } from "./schema/typeDefs";
-import { todoResolvers } from "./resolvers/todoResolvers";
 import { connectDB } from "./config";
+import { schema } from "./graphql";
 
 const startServer = async () => {
   await connectDB();
 
   const server = new ApolloServer({
-    typeDefs,
-    resolvers: todoResolvers,
+    schema,
   });
 
   server.listen({ port: 4000 }).then(({ url }) => {
