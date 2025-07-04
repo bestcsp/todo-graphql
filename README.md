@@ -1,91 +1,49 @@
-# 🚀 GraphQL Todo App
+# 🚀 GraphQL Todo App (Vite + Docker + MongoDB)
 
-A **full-stack Todo app** using:
-- **Frontend:** Vite + React + TypeScript + Apollo Client
-- **Backend:** Apollo Server (GraphQL) + TypeScript + MongoDB
-- **Database:** MongoDB via Docker
+A **full-stack Todo app** using Vite + React + TypeScript + Apollo Client (frontend), Node + TypeScript + Apollo Server (backend), and MongoDB (via Docker), fully Dockerized for instant local and production-ready development.
 
----
+## ⚡ Quick Start (Docker)
 
-## ⚡ Quick Start
-
-### 🐳 1. Start MongoDB
-
-Run MongoDB using Docker without installing locally:
+1️⃣ **Clone the repository**
 
 ```bash
-docker compose up -d
+git clone <your-repo-url>
+cd <your-project-folder>
 ```
 
----
-
-### 🚀 2. Run Backend
+2️⃣ **Run with Docker Compose**
 
 ```bash
-cd backend
-npm install
+docker compose up --build
 ```
 
-Create `.env` in `backend/`:
+✅ This will:
+- Start MongoDB
+- Build and run the GraphQL backend
+- Build and serve the Vite frontend with Nginx
 
-```
-MONGO_URI=mongodb://root:password@localhost:27017/
-```
+3️⃣ **Access the app**
 
-Start the server:
-
-```bash
-npm run dev
-```
-
-GraphQL Playground:
-```
-http://localhost:4000
-```
-
----
-
-### 🌐 3. Run Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Open in browser:
-```
-http://localhost:5173
-```
-
----
+- Frontend: [http://localhost:5173](http://localhost:5173)
+- GraphQL Playground: [http://localhost:4000](http://localhost:4000)
 
 ## ✅ Features
 
 - Add, toggle, delete todos
-- GraphQL API using Apollo Server
-- Apollo Client for frontend GraphQL operations
-- Hot reload for fast development
-- MongoDB persistence via Docker
+- GraphQL API with Apollo Server
+- MongoDB for persistent storage
+- Fast Vite React frontend
+- Fully Dockerized for clean local and deployment workflow
 
----
+## 🪐 Tech Stack
+
+- Frontend: Vite + React + TypeScript + Apollo Client
+- Backend: Node + TypeScript + Apollo Server
+- Database: MongoDB (via Docker)
+- Containerization: Docker + Docker Compose
 
 ## 📄 License
 
-MIT
+
 
 ---
-
-## ✨ Summary
-
-This **clean, minimal boilerplate** lets you learn and build with:
-
-- Vite + React + TypeScript + GraphQL
-- Apollo Client + Server
-- MongoDB (via Docker)
-
-in a **fast, practical setup** for your projects or learning pipeline.
-
----
-
-🚀 **Happy Building!**
